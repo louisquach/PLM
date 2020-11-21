@@ -1,10 +1,10 @@
 import React, {createContext, useState} from 'react';
 import axios from 'axios'
 
-const DataProvider = createContext()
+const DataProvider = createContext(DataContext)
 
 function DataContext(props) {
-    const [data,setData] = useState([])
+    const [data,setData] = useState([{name: "beo", age: 3}])
 
     useEffect(() => {
         console.log("hehehe")
