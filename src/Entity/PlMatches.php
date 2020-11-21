@@ -23,12 +23,12 @@ class PlMatches
     private $matches;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="string")
      */
     private $day;
 
     /**
-     * @ORM\Column(type="string", length=2)
+     * @ORM\Column(type="string", length=255)
      */
     private $home;
 
@@ -105,5 +105,10 @@ class PlMatches
         $this->subscribe = $subscribe;
 
         return $this;
+    }
+
+    public function toArray(): array
+    {
+        return ['id' => $this->id, 'match' => $this->matches, 'day' => $this->day, 'home' => $this->home, 'away' => $this->away, 'subscribe' => $this->subscribe];
     }
 }

@@ -1,13 +1,15 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 import axios from 'axios'
 
-const DataProvider = createContext(DataContext)
+export const DataContext = createContext()
 
-function DataContext(props) {
+function DataContextProvider(props) {
     const [data,setData] = useState([{name: "beo", age: 3}])
 
-    useEffect(() => {
-        console.log("hehehe")
+    useEffect(async () => {
+        await axios.get('/api/matches/list')
+            .then( res => setData(res.data))
+            .catch( err => console.log(err))
         },[]
     )
 
@@ -24,10 +26,10 @@ function DataContext(props) {
     }
 
     return (
-        <DataProvider value={{data, deleteData, update} }>
-            {React.children}
-        </DataProvider>
+        <DataContext.Provider value={{data:data,list: () => list(), deleteData : () => deleteData(), update:() => update()} }>
+            {props.children}
+        </DataContext.Provider>
     );
 }
 
-export default DataContext;
+export default DataContextProvider;

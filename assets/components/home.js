@@ -1,11 +1,10 @@
 import React,{useContext} from 'react';
 import { Icon, Table,Menu } from 'semantic-ui-react'
-import DataContext from "./DataProvider";
+import {DataContext} from "./DataProvider";
 
 function Home(props) {
     const context = useContext(DataContext)
-
-    console.log(context)
+    console.log(context.data)
     return (
         <div>
             <Table celled style={{width: '80vw', marginTop: '50px'}}>
