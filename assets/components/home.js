@@ -4,27 +4,31 @@ import {DataContext} from "./DataProvider";
 
 function Home(props) {
     const context = useContext(DataContext)
-    console.log(context.data)
+    console.log(context)
     return (
         <div>
             <Table celled style={{width: '80vw', marginTop: '50px'}}>
                 <Table.Header>
                     <Table.Row>
-                        <Table.HeaderCell>Match</Table.HeaderCell>
                         <Table.HeaderCell>Date</Table.HeaderCell>
-                        <Table.HeaderCell>Result</Table.HeaderCell>
+                        <Table.HeaderCell>Match</Table.HeaderCell>
+                        <Table.HeaderCell>Subscribe</Table.HeaderCell>
                         <Table.HeaderCell>Action</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
 
                 <Table.Body>
-                    <Table.Row>
-                        <Table.Cell>Arsenal vs Manchester United</Table.Cell>
-                        <Table.Cell>Cell</Table.Cell>
-                        <Table.Cell>Cell</Table.Cell>
-                        <Table.Cell>Cell</Table.Cell>
+                    {
+                        context.data.length > 0 && context.data.map( match =>
+                            <Table.Row key={match.id}>
+                                <Table.Cell>{match.day}</Table.Cell>
+                                <Table.Cell>{match.home} vs {match.away}</Table.Cell>
+                                <Table.Cell><button>No</button></Table.Cell>
+                                <Table.Cell>Action</Table.Cell>
+                            </Table.Row>
+                        )
+                    }
 
-                    </Table.Row>
                 </Table.Body>
 
                 <Table.Footer>

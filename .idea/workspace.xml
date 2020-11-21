@@ -21,10 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e6765c53-e4db-44eb-a7e1-ac66901ee65b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/components/DataProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/components/DataProvider.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/components/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/components/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/football.csv" beforeDir="false" afterPath="$PROJECT_DIR$/football.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MatchesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MatchesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/PlMatches.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PlMatches.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +167,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../PHP-React" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="IntelliLang.Configuration" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -187,7 +187,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605927739201</updated>
-      <workItem from="1605927740372" duration="16353000" />
+      <workItem from="1605927740372" duration="33280000" />
     </task>
     <servers />
   </component>
@@ -206,6 +206,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="60" y="204" key="#SQL_Dialects" timestamp="1605970401099">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="60" y="204" key="#SQL_Dialects/0.0.1366.728@0.0.1366.728" timestamp="1605970401099" />
     <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605940758096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -226,17 +230,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1605936007283" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1605930963512">
+    <state x="184" y="0" key="SettingsEditor" timestamp="1605973339277">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1605930963512" />
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1605973339277" />
     <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1605932029369">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1605932029369" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1605942580959">
+    <state x="339" y="157" key="run.anything.popup" timestamp="1605975035524">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1605942580959" />
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1605975035524" />
   </component>
 </project>

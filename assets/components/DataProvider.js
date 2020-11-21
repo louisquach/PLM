@@ -4,17 +4,19 @@ import axios from 'axios'
 export const DataContext = createContext()
 
 function DataContextProvider(props) {
-    const [data,setData] = useState([{name: "beo", age: 3}])
+    const [data,setData] = useState([])
 
-    useEffect(async () => {
-        await axios.get('/api/matches/list')
+    useEffect(() => {
+        axios.get('/api/matches/list')
             .then( res => setData(res.data))
             .catch( err => console.log(err))
         },[]
     )
-
-    const list = () => {
-
+    console.log(data)
+    const insertData = async () => {
+        await axios.get('/api/matches/insert')
+            .then( res => console.log(res.status))
+            .catch( e => console.log(e))
     }
 
     const deleteData = (id) => {
@@ -26,7 +28,7 @@ function DataContextProvider(props) {
     }
 
     return (
-        <DataContext.Provider value={{data:data,list: () => list(), deleteData : () => deleteData(), update:() => update()} }>
+        <DataContext.Provider value={{data, deleteData : () => deleteData(), update:() => update() }}>
             {props.children}
         </DataContext.Provider>
     );

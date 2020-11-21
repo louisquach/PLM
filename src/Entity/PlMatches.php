@@ -18,11 +18,6 @@ class PlMatches
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $matches;
-
-    /**
      * @ORM\Column(type="string")
      */
     private $day;
@@ -33,7 +28,7 @@ class PlMatches
     private $home;
 
     /**
-     * @ORM\Column(type="string", length=2)
+     * @ORM\Column(type="string", length=25)
      */
     private $away;
 
@@ -45,18 +40,6 @@ class PlMatches
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getMatches(): ?string
-    {
-        return $this->matches;
-    }
-
-    public function setMatches(string $matches): self
-    {
-        $this->matches = $matches;
-
-        return $this;
     }
 
     public function getDay(): ?\DateTimeInterface
@@ -109,6 +92,6 @@ class PlMatches
 
     public function toArray(): array
     {
-        return ['id' => $this->id, 'match' => $this->matches, 'day' => $this->day, 'home' => $this->home, 'away' => $this->away, 'subscribe' => $this->subscribe];
+        return ['id' => $this->id, 'day' => $this->day, 'home' => $this->home, 'away' => $this->away, 'subscribe' => $this->subscribe];
     }
 }
