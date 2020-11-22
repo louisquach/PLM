@@ -14,7 +14,7 @@ the result to pdf or csv file.
 - Practice to create functions: 
 		+ convert date format
 		+ Pagination
-		+ Read and insert data from csv file to database
+		+ Read and insert data from csv file to database D
 		+ Generate csv and pdf file
 
 C. Configuration
