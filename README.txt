@@ -13,9 +13,9 @@ the result to pdf or csv file.
 - Axios for sending http requests.
 - Practice to create functions: 
 		+ convert date format
-		+ Pagination
+		+ Pagination D
 		+ Read and insert data from csv file to database D
-		+ Generate csv and pdf file
+		+ Generate csv D and pdf file
 
 C. Configuration
 - Set up symfony project full framework: symfony new [projectname] --full

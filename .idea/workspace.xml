@@ -22,12 +22,10 @@
     <list default="true" id="e6765c53-e4db-44eb-a7e1-ac66901ee65b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/components/DataProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/components/DataProvider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/components/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/components/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MatchesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MatchesController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +189,8 @@
       <updated>1605927739201</updated>
       <workItem from="1605927740372" duration="33471000" />
       <workItem from="1605977374528" duration="23000" />
-      <workItem from="1606010993375" duration="20067000" />
+      <workItem from="1606010993375" duration="42398000" />
+      <workItem from="1606211359945" duration="1867000" />
     </task>
     <servers />
   </component>
@@ -247,9 +246,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606034873768" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606011067830">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606084288007">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606011067830" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606084288007" />
   </component>
 </project>

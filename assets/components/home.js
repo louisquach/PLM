@@ -19,7 +19,6 @@ function Home(props) {
 
     const handlePageChange = (page) => {
         setActivePage(page);
-        console.log(page)
     }
 
     useEffect( async () => {
@@ -36,7 +35,7 @@ function Home(props) {
             setArrayDisplay(arrayMatches)
         }
     }
-    console.log(arrayDisplay)
+
     return (
         <div>
             <Table celled style={{width: '80vw', marginTop: '50px'}}>
@@ -74,7 +73,7 @@ function Home(props) {
                                     activePage={activePage}
                                     itemsCountPerPage={matchNum}
                                     totalItemsCount={matches.length}
-                                    pageRangeDisplayed={10}
+                                    pageRangeDisplayed={7}
                                     onChange={handlePageChange}
                                 />
                             </div>

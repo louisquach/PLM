@@ -12,7 +12,7 @@ function DataContextProvider(props) {
             .catch( err => console.log(err))
         },[]
     )
-    console.log(data)
+
     const insertData = async () => {
         await axios.get('/api/matches/insert')
             .then( res => console.log(res.status))

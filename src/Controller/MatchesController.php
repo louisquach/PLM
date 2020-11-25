@@ -10,6 +10,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use League\Csv\Reader;
+use League\Csv\Writer;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 /**
  * @Route("api/matches", name="matches")
  */
@@ -29,19 +32,21 @@ class MatchesController extends AbstractController
      */
     public function index(): Response
     {
-       $arrayMatches = [];
-       $result = $this->plMatchesRepository->findAll();
-       foreach ($result as $match) {
-           $arrayMatches[] = $match->toArray();
-       }
-       return $this->json($arrayMatches);
+        $arrayMatches = [];
+        $result = $this->plMatchesRepository->findAll();
+        foreach ($result as $match) {
+            $arrayMatches[] = $match->toArray();
+        }
+        return $this->json($arrayMatches);
     }
 
     /**
      * @Route("/insert", name="insert")
      * @throws Exception
      */
-    public function insertData(): Response {
+    public function insertData(): Response
+    {
+        $filePath = './../football.csv';
         $connectionParams = array(
             'dbname' => 'plm',
             'user' => 'root',
@@ -51,7 +56,7 @@ class MatchesController extends AbstractController
         );
         $conn = DriverManager::getConnection($connectionParams);
 
-        $csv = Reader::createFromPath('./../football.csv','r');
+        $csv = Reader::createFromPath($filePath, 'r');
         $record = $csv->getRecords();
         $query = $conn->createQueryBuilder();
 
@@ -67,5 +72,34 @@ class MatchesController extends AbstractController
                 ->execute();
         }
         return $this->json($record);
+    }
+
+    /**
+     * @Route("/export_csv", name="export_csv")
+     */
+    public function exportCsv(): Response
+    {
+        $result = $this->plMatchesRepository->findAll();
+        header('Content-Type: text/csv; charset=utf-8');
+        header('Content-Disposition: attachment; filename=pl_matches.csv');
+
+// create a file pointer connected to the output stream
+        $output = fopen('php://output', 'w');
+// loop over the rows, outputting them
+        $array = ['Match Id', "Match Day", "Home", "Away"];
+        fputcsv($output,$array);
+        foreach ($result as $match) {
+            fputcsv($output, $match->toArray());
+        }
+        fclose($output);
+    }
+
+    /**
+     * @Route("/export_pdf", name="export_pdf")
+     */
+    public function exportPdf(): Response
+    {
+        $data = $this->plMatchesRepository->findAll();
+
     }
 }
